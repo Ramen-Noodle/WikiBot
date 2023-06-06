@@ -66,6 +66,7 @@ async def on_message(message):
         # Show commands
         if message.content.split("!", 1)[1] == "help":
             await message.channel.send("Usage:\nwiki!search [Article Name]\nwiki!random")
+            return
         # Handle invalid commands
         await message.channel.send("Invalid Command")
     else:
