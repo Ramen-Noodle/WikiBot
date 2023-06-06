@@ -63,6 +63,9 @@ async def on_message(message):
                 p = wikipedia.page(s)
             await message.channel.send(url.format(pid = p.pageid))
             return
+        # Show commands
+        if message.content.split("!", 1)[1] == "help":
+            await message.channel.send("Usage:\nwiki!search [Article Name]\nwiki!random")
         # Handle invalid commands
         await message.channel.send("Invalid Command")
     else:
