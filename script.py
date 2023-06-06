@@ -33,7 +33,7 @@ async def on_message(message):
         return
     
     # Only respond to messages with command prefix
-    if message.content.startswith('wiki!'):
+    if message.content.startswith('wiki!') or message.content.startswith('Wiki!'):
         # Search specific article
         if message.content.split("!", 1)[1].startswith("search"):
             # Search page
